@@ -1,0 +1,18 @@
+{% extends "__base.html" %}
+
+{% block contentHeader %}View Lists - (<a href="{{ url_for('list-create') }}">Create List</a>){% endblock %}
+
+{% block content %}
+
+{% if data %}
+<table>
+	<tr><td><b>List Name</b></td><td>List Description</td><td></td><td></td><td></td>
+	{% for list in data %}
+		<tr><td><b>{{ list.name }}</td><td>{{ list.description }}</td><td><a href='/list/{{ list.key() }}'>View/Edit</a></td><td><a href='/list/{{ list.key() }}/send'>Send SMS</a></td><td><a href='/list/{{ list.key() }}/delete'>Delete</a></td></tr>
+	{% endfor %}
+</table>
+{% else %}
+<p>No lists yet.</p>
+{% endif %}
+
+{% endblock content %}

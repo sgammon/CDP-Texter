@@ -1,0 +1,9 @@
+{% extends "__base.html" %}
+{% from "snippets/macros.html" import renderForm %}
+
+
+{% block contentHeader %}Send to List: "{{ list.name }}"{% endblock %}
+
+{% block content %}
+	{{ renderForm(form, action='#', method='post') }}
+{% endblock content %}

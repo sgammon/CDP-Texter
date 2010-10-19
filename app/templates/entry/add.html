@@ -1,0 +1,10 @@
+{% extends "__base.html" %}
+{% from "snippets/macros.html" import renderForm %}
+
+{% block contentHeader %}List "<a href='/list/{{ list.key() }}'>{{ list.name }}</a>": Add Entry{% endblock %}
+
+{% block content %}
+
+	{{ renderForm(form, action='#', method='post') }}
+
+{% endblock %}

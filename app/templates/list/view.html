@@ -1,0 +1,33 @@
+{% extends "__base.html" %}
+{% from "snippets/macros.html" import renderForm %}
+
+{% block contentHeader %}View List (<a href='{{ url_for("list-groups") }}'>Back</a>, <a href='/list/{{ list.key() }}/send'>Send to this list!</a>){% endblock %}
+
+{% block content %}
+
+{% if deleteSuccess %}<div class='flash'>Entry successfully deleted.</div>{% endif %}
+
+{% if form %}
+
+	{{ renderForm(form, action='#', method='post') }}
+
+{% else %}
+<p><b>No model form given to render.</b></p>
+{% endif %}
+
+<hr>
+<p><b>List Members (<a href="/list/{{ list.key() }}/add">Add Member</a>)</b></p>
+
+{% if has_members %}
+
+	<ul>
+		{% for member in list.members %}
+			<li>{{ member.firstname }} {{ member.lastname }} [{{ member.phone_number }}] - (<a href="/list/{{ list.key() }}/entry/{{ member.key() }}">Edit</a>, <a href="/list/{{ list.key() }}/entry/{{ member.key() }}/delete">Delete</a>)</li>
+		{% endfor %}
+	</ul>
+
+{% else %}
+<p><b>No members yet :(</b></p>
+{% endif %}
+
+{% endblock %}

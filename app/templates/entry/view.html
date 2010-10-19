@@ -1,0 +1,17 @@
+{% extends "__base.html" %}
+{% from "snippets/macros.html" import renderForm %}
+
+
+{% block contentHeader %}
+	<h2>List "{{ list.name }}" Member: {{ key.lastname.upper() }}, {{ key.firstname.upper() }}</h2>
+{% endblock %}
+
+{% block content %}
+
+{% if form %}
+	{{ renderForm(form, method='post', action='#') }}
+{% else %}
+<p>No form provided.</p>
+{% endif %}
+
+{% endblock %}

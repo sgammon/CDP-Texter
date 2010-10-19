@@ -1,0 +1,17 @@
+{% extends "__base.html" %}
+
+{% block contentHeader %}Delete List{% endblock %}
+
+{% block content %}
+
+{% if key %}
+
+	<p>Are you sure you want to delete the list "{{ key.name() }}"?</p>
+	<form action='#' method='post'><input type='submit' value='Delete!'></input></form>
+		
+{% else %}
+<p><b>No key given to delete.</b></p>
+{% endif %}
+
+
+{% endblock %}

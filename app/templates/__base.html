@@ -1,0 +1,32 @@
+<html>
+
+<head>
+	<title>CDP Texter{% if title %} - {{ title }}{% endif %}</title>
+	{% include "snippets/__north.html" %}
+	
+	{% block head %}{% endblock %}
+</head>
+
+
+<body{% if bgclass %} class='{{ bgclass }}'{% endif %}>
+	
+	<div id='wrapper'>
+
+		{% if flash %}<div class='flash'>{{ flash }}</div>{% endif %}
+
+		<div id='header'><h1>CDP Texter{% if title %} :: {{ title }}{% endif %}</h1></div>
+
+		<div id='content_header'>
+			{% block contentHeader %}
+			{% endblock %}
+		</div>
+
+		<div id='content'>
+			{% block content %}
+			{% endblock %}
+		</div>
+	</div>
+	
+</body>
+
+</html>

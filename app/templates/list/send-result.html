@@ -1,0 +1,22 @@
+{% extends "__base.html" %}
+
+{% block contentHeader %}Send Status - List "{{ list.name }}"{% endblock %}
+
+{% block content %}
+
+<p><b>Queued Outgoing SMS (<a href='/list/{{ list.key() }}'>List "{{ list.name }}"</a>, <a href='/'>Back to Lists</a>):</b></p>
+<ul>
+	<li><b>Entries:</b><ul>
+		{% for item in status %}
+		<li>{{ item.list }}: {{ item.number }}</li>
+		{% endfor %}
+		</ul></li>
+	
+	<li><b>Queued Tasks:</b><ul>
+		{% for item in tasks %}
+		<li>{{ item.name }}</li>
+	</ul></li>
+{% endfor %}
+</ul>
+
+{% endblock %}

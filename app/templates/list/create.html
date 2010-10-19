@@ -1,0 +1,16 @@
+{% extends "__base.html" %}
+{% from "snippets/macros.html" import renderForm %}
+
+{% block contentHeader %}Create List{% endblock %}
+
+
+{% block content %}
+
+{% if form %}
+	{{ renderForm(form, action='#', method='post') }}
+{% else %}
+<p><b>No model form given to render.</b></p>
+{% endif %}
+
+
+{% endblock %}
