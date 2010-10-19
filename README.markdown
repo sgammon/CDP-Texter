@@ -1,13 +1,13 @@
-========== CDP Texter ==========
+# CDP Texter
 
-*Author:* [Sam Gammon](http://github.com/sgammon) <sg@samgammon.com>
-*Repository:* [sgammon/CDP-Texter](http://github.com/sgammon/CDP-Texter)
-*Version:* 0.1 beta
+##Basic Info
+* **Author:** [Sam Gammon](http://github.com/sgammon) (sg@samgammon.com)
+* **Repository:** [sgammon/CDP-Texter](http://github.com/sgammon/CDP-Texter)
+* **Version:** 0.1 beta
+* **Status:** Complete
+* **App ID:** cdptexter
 
-*Description:*
-Allows authenticated admin users to create lists of phone numbers, then send SMS in bulk to them using Twilio (http://twilio.com).
+##Notes
 
-*Notes:*
-
-* Sam, 10-18-2010
-This app was meant to be super-rapid development... so it's quick and dirty. Not a very pretty interface and no stability testing... app also incorporates no caching or performance-enhancing code of any kind.
+* **Sam, 10-18-2010**
+> This app was completed in a day... the client (California Democratic Party) requested super-rapid development, so it's quick and dirty. Not a very pretty interface and no stability testing... app also incorporates no caching or performance-enhancing features of any kind. DON'T JUDGE ME
